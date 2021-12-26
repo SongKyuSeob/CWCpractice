@@ -9,17 +9,51 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding(15)
-            .background(Color.green)
-            .cornerRadius(17)
-            .foregroundColor(Color.white)
-            .padding(13)
-            .background(Color.blue)
-            .cornerRadius(17)
         
+        VStack{
+                       
+            ZStack{
+                
+                Image("toronto")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .cornerRadius(20)
+                    .padding()
+                
+                VStack{
+                    Text("CN Tower")
+                        .font(.title)
+                    Text("Toronto")
+                        .font(.subheadline)
+                }
+                .foregroundColor(Color.white)
+                .padding()
+                .background(Color.black)
+                .opacity(0.85)
+            }
+            Spacer()
             
-        
+            ZStack{
+                
+                Image("london")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .cornerRadius(20)
+                    .padding()
+                
+                VStack{
+                    Text("Big Ben")
+                        .font(.title)
+                    Text("london")
+                        .font(.subheadline)
+                }
+                .foregroundColor(Color.white)
+                .padding()
+                .background(Color.black)
+                .opacity(0.85)
+            }
+            
+        }
     }
 }
 
